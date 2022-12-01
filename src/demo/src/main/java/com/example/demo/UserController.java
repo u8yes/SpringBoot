@@ -17,6 +17,6 @@ public class UserController {
 
         System.out.printf("name : %s, age : %d\n",
                 userDto.getName(), userDto.getAge());
-        
+
     }
 }

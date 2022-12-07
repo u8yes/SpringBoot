@@ -32,8 +32,15 @@ public class MemberController {
         member.setName(form.getName());
 
         Long id = service.join(member);
-        System.out.println("=> id : " + id);
+        System.out.println("=> 아이디 : " + id);
 
         return "redirect:/";
+    }
+
+    @GetMapping(value="/members")
+    public String list(Model model){
+        service.findAll();
+
+        return null;
     }
 }

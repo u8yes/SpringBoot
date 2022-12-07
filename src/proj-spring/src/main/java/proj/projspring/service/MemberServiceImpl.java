@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import proj.projspring.domain.Member;
 import proj.projspring.repository.MemberRepository;
 
+import java.util.List;
+
 @Service
 public class MemberServiceImpl implements MemberService{
 
@@ -15,5 +17,10 @@ public class MemberServiceImpl implements MemberService{
 
         repository.save(member);
         return member.getId();
+    }
+
+    @Override
+    public List<Member> findAll() {
+        return null;
     }
 }
